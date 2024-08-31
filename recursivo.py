@@ -6,12 +6,13 @@ def corteBarrasAux(Precos, n):
     Cortes = [0] *len(Precos)
     corteBarras(Precos, Resultados, n, Cortes)
     print("Valor máximo: ", Resultados[n])
+    print("Corte: ", Cortes[n])
 
-    while True:
-        print("Corte: ", Cortes[n])
-        n = Cortes[n]
-        if n == 0:
-            break
+    #while True:
+        #print("Corte: ", Cortes[n])
+        #n = Cortes[n]
+        #if n == 0:
+            #break
 
 def corteBarras(Precos, Resultados, n, Cortes):
     if Resultados[n] != 0:
@@ -47,7 +48,7 @@ def criarEntrada(tam):
 
 tempo = []
 for i in range(0, 1000):
-    tam = 10
+    tam = 30
     Precos = criarEntrada(tam)
     #Para testes
     #Precos = [1, 5, 8, 9, 10, 17, 17, 20, 24, 30]
@@ -68,9 +69,3 @@ for i in range(len(tempo)):
 t = t/1000
 print("Tempo médio: %.2f" % (t))
 print()
-
-#178.82 microsegundos 10
-#188.70 microsegundos 15
-#198.43 microsegundos 20
-#201.07 microsegundos 25
-#203.47 microsegundos 30
